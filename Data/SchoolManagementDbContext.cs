@@ -21,9 +21,9 @@ public partial class SchoolManagementDbContext : DbContext
     {
         modelBuilder.Entity<Course>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Courses__3214EC074789CD06");
+            entity.HasKey(e => e.Id).HasName("PK__Courses__3214EC07249CAFEE");
 
-            entity.HasIndex(e => e.Code, "UQ__Courses__A25C5AA73A411709").IsUnique();
+            entity.HasIndex(e => e.Code, "UQ__Courses__A25C5AA731128CE3").IsUnique();
 
             entity.Property(e => e.Code).HasMaxLength(5);
             entity.Property(e => e.Name).HasMaxLength(50);
@@ -31,7 +31,7 @@ public partial class SchoolManagementDbContext : DbContext
 
         modelBuilder.Entity<Lecturer>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Lecturer__3214EC071B7E2E05");
+            entity.HasKey(e => e.Id).HasName("PK__Lecturer__3214EC0790B69EDB");
 
             entity.Property(e => e.FirstName).HasMaxLength(50);
             entity.Property(e => e.LastName).HasMaxLength(50);
@@ -39,7 +39,7 @@ public partial class SchoolManagementDbContext : DbContext
 
         modelBuilder.Entity<Student>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Students__3214EC07DC212ED1");
+            entity.HasKey(e => e.Id).HasName("PK__Students__3214EC071FBBB2E9");
 
             entity.Property(e => e.DateOfBirth).HasColumnType("date");
             entity.Property(e => e.FirstName).HasMaxLength(50);

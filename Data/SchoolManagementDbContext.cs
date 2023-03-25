@@ -13,7 +13,7 @@ public partial class SchoolManagementDbContext : DbContext
 
     public virtual DbSet<Course> Courses { get; set; }
 
-    public virtual DbSet<Lecturer> Lecturers { get; set; }
+    public virtual DbSet<Lecturers> Lecturers { get; set; }
 
     public virtual DbSet<Student> Students { get; set; }
 
@@ -29,7 +29,7 @@ public partial class SchoolManagementDbContext : DbContext
             entity.Property(e => e.Name).HasMaxLength(50);
         });
 
-        modelBuilder.Entity<Lecturer>(entity =>
+        modelBuilder.Entity<Lecturers>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Lecturer__3214EC0790B69EDB");
 

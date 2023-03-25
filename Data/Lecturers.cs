@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace SchoolManagementApp.MVC.Data;
 
-public partial class Lecturer
+public partial class Lecturers
 {
     public int Id { get; set; }
 

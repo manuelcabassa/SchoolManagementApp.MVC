@@ -1,4 +1,4 @@
-@model IEnumerable<SchoolManagementApp.MVC.Data.Class>
+@model IEnumerable<SchoolManagementApp.MVC.Data.Enrollment>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,13 +13,13 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Time)
+                @Html.DisplayNameFor(model => model.Grade)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Courses)
+                @Html.DisplayNameFor(model => model.Class)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Lecturer)
+                @Html.DisplayNameFor(model => model.Student)
             </th>
             <th></th>
         </tr>
@@ -28,13 +28,13 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Time)
+                @Html.DisplayFor(modelItem => item.Grade)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Courses.Id)
+                @Html.DisplayFor(modelItem => item.Class.Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Lecturer.Id)
+                @Html.DisplayFor(modelItem => item.Student.Id)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
